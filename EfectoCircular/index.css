@@ -19,33 +19,22 @@ body{
     width: 200px;
     height: 200px;
     transform: rotate(90deg);
-
+    position: relative;
+    display:flex;
 }
 
 .div-primario::before{
     content: " ";
-    display: block;
-    background-color: #fff;
-    border-radius:0  0 50% 50%;
-    width: 200px;
-    height: 200px;
-    position: relative;
-    top: -50%;
-    transform: translateY(-50%);
-    animation: rotate 4s alternate infinite ease-in-out;  
-}
-
-.div-primario::after{
-    content: " ";
-    display: block;
+    display: inline;
     background-color: #fff;
     border-radius:50%;
     width: 200px;
     height: 200px;
-    position: relative;
-    top: -50%;
-    transform: translateY(50%) 
+    position: absolute;
+    /* animation: rotate 4s alternate infinite ease-in-out; */
+    z-index: 1; 
 }
+
 
 @keyframes rotate {
     0%{
